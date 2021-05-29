@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Geolocalizacion</title>
+  <title>Generador de QR codes</title>
   <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
   <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
 
@@ -18,32 +18,82 @@
     Author: BootstrapMade.com
     Author URL: https://bootstrapmade.com
   ======================================================= -->
-  <!-- GOOGLE Maps -->
-  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
 </head>
 
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <!--banner-->
+  <section id="banner" class="banner">
+    <div class="bg-color">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				      </button>
+              <a class="navbar-brand" href="#">Inicio</a>
+            </div>
+            <div class="collapse navbar-collapse navbar-right" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li class=""><a href="#about">Generador QR</a></li>
+                <li class=""><a href="#contact">Lector QR</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </section>
+  <!--/ banner-->
+  <!--about-->
+  <section id="about" class="section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-4 col-xs-12">
+          <div class="section-title">
+            <h2 class="head-title lg-line">Generador de Codigo QR</h2>
+            <hr class="botm-line">
+			<form action="" method="" role="form" class="contactForm">
+            <div class="form-group">
+				<input type="text" name="generadortexto" class="form-control br-radius-zero" id="generadorTexto" required placeholder="www.ejemplo.com"  />
+				<br>
+				<button type="button" onclick="generarQR()" class="btn btn-form">Generar codigo</button>
+			</div>
+			</form>
+          </div>
+        </div>
+        <div class="col-md-9 col-sm-8 col-xs-12 text-center">
+          <div id="codigoqr" class="cnt text-center">  </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--/ about-->
   <!--contact-->
   <section id="contact" class="section-padding">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h2 class="ser-title">Geolocalización con Google Maps </h2>
+          <h2 class="ser-title">Lector de codigo QR </h2>
           <hr class="botm-line">
         </div>
         <div class="col-md-4 col-sm-4">
-          <h3>Ubicación</h3>
+          
+		  <button onclick="leerQR()" class="btn btn-form">Escanear codigo</button>
 		  <div class="space"></div>
-          <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>Latitud: <span id="latitud"></span></p>
-          <div class="space"></div>
-          <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>Longitud: <span id="longitud"></span> </p>
-          <div class="space"></div>
-          <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>Exactitud: <span id="exactitud"></span> </p>
+		  <h3>Texto:</h3>
 		  <div class="space"></div>
+          <p id="lectorTexto"> </p>
+          <div class="space"></div>
         </div>
         <div  class="col-md-8 col-sm-8 marb20">  
-          <div id="mapa" class="cnt">  </div>
+          <div id="webcam" class="cnt">  </div>
+		  
         </div>
 		
       </div>
@@ -121,8 +171,11 @@
   <script src="js/jquery.easing.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/custom.js"></script>
-   <!-- Geolocalizacion SCRIPTS -->
-    <script src="js/script.js"></script>
+   <!--  SCRIPTS -->
+  
+    <script src="js/qrcode.js"></script>
+	<script src="js/qrcode.min.js"></script>
+	<script src="js/script.js"></script>
 
 
 </body>
