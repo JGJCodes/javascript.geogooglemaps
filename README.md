@@ -1,2 +1,2 @@
-# javascript.webqrcode
- Se trata de una pagina web generadora de codigos qr
+# javascript.geogooglemaps
+ Se trata de un ejemplo de un visor de geololizacion con google maps

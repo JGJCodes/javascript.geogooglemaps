@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Generador de QR codes</title>
+  <title>Geolocalizacion</title>
   <meta name="description" content="Free Bootstrap Theme by BootstrapMade.com">
   <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
 
@@ -18,12 +18,13 @@
     Author: BootstrapMade.com
     Author URL: https://bootstrapmade.com
   ======================================================= -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+  <!-- GOOGLE Maps -->
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 </head>
 
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<<<<<<< HEAD
   <!--banner
   <section id="banner" class="banner">
     <div class="bg-color">
@@ -75,25 +76,28 @@
   </section>
   <!--/ about-->
   <!--contact
+=======
+  <!--contact-->
+>>>>>>> parent of 241c5d4 (Initial commit)
   <section id="contact" class="section-padding">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <h2 class="ser-title">Lector de codigo QR </h2>
+          <h2 class="ser-title">Geolocalización con Google Maps </h2>
           <hr class="botm-line">
         </div>
         <div class="col-md-4 col-sm-4">
-          
-		  <button onclick="leerQR()" class="btn btn-form">Escanear codigo</button>
+          <h3>Ubicación</h3>
 		  <div class="space"></div>
-		  <h3>Texto:</h3>
-		  <div class="space"></div>
-          <p id="lectorTexto"> </p>
+          <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>Latitud: <span id="latitud"></span></p>
           <div class="space"></div>
+          <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>Longitud: <span id="longitud"></span> </p>
+          <div class="space"></div>
+          <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>Exactitud: <span id="exactitud"></span> </p>
+		  <div class="space"></div>
         </div>
         <div  class="col-md-8 col-sm-8 marb20">  
-          <div id="webcam" class="cnt">  </div>
-		  
+          <div id="mapa" class="cnt">  </div>
         </div>
 		
       </div>
@@ -171,11 +175,8 @@
   <script src="js/jquery.easing.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/custom.js"></script>
-   <!--  SCRIPTS -->
-  
-    <script src="js/qrcode.js"></script>
-	<script src="js/qrcode.min.js"></script>
-	<script src="js/script.js"></script>
+   <!-- Geolocalizacion SCRIPTS -->
+    <script src="js/script.js"></script>
 
 
 </body>

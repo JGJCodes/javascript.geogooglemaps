@@ -82,7 +82,7 @@ banner
 
 .navbar-brand
 {
-	color: #fff;
+	font-family: 'Chewy', cursive;
 	font-size: 32px;
 }
 
@@ -137,12 +137,12 @@ banner
 #banner{
 	background: url('../img/bg-banner.jpg') no-repeat fixed;
 	background-size: cover;
-	min-height: 90px;
+	min-height: 650px;
 	position: relative;
 }
 .bg-color{
 	background-color: RGBA(13, 70, 83, 0.78);
-	min-height: 90px;
+	min-height: 650px;
 }
 .banner-info{
 	padding-top: 190px;
